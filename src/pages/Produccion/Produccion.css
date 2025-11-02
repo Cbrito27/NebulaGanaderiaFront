@@ -1,0 +1,186 @@
+.produccionMain {
+  padding: 24px;
+  background: #ffffff;
+  min-height: 100%;
+  color: #222;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.produccionMain h2 {
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+/* FORMULARIO */
+.produccionForm form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  align-items: center;
+  background: #fbfbfb;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(18, 18, 18, 0.03);
+}
+
+.produccionForm label {
+  grid-column: span 1;
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+.produccionForm input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  background: #fff;
+}
+
+.produccionForm input:focus {
+  border-color: #b88a57;
+  box-shadow: 0 0 0 3px rgba(184, 138, 87, 0.08);
+}
+
+.produccionForm button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 10px 18px;
+  background: linear-gradient(180deg, #6b4b2f, #4b3523);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
+}
+
+.produccionForm button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(75, 53, 35, 0.12);
+}
+
+/* TABLA */
+.produccionList table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.produccionList thead th {
+  text-align: left;
+  padding: 12px 14px;
+  background: #f7f5f3;
+  font-size: 13px;
+  color: #4a4a4a;
+  border-bottom: 1px solid #eee;
+}
+
+.produccionList tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 14px;
+  color: #333;
+}
+
+.produccionList tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.produccionList button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  background: #b88a57;
+  color: #fff;
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
+}
+
+.produccionList button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(75, 53, 35, 0.12);
+}
+
+.produccion-empty {
+  padding: 28px;
+  text-align: center;
+  color: #777;
+  border: 1px dashed #eee;
+  border-radius: 8px;
+  background: #fbfbfb;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .produccionForm form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .produccionMain {
+    padding: 16px;
+  }
+
+  .produccionForm form {
+    grid-template-columns: 1fr;
+  }
+
+  .produccionForm button {
+    width: 100%;
+  }
+
+  .produccionList thead {
+    display: none;
+  }
+
+  .produccionList table,
+  .produccionList tbody,
+  .produccionList tr,
+  .produccionList td {
+    display: block;
+    width: 100%;
+  }
+
+  .produccionList tr {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    padding: 12px;
+  }
+
+  .produccionList td {
+    padding: 6px 0;
+    border: none;
+    font-size: 14px;
+  }
+
+  .produccionList td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .produccionList button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,198 @@
+/* src/pages/Ganado/Ganado.css */
+
+/* Contenedor principal */
+.ganado {
+  padding: 24px;
+  background: #ffffff;
+  min-height: 100%;
+  color: #222;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Título */
+.ganado h2 {
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+/* FORMULARIO */
+.ganado-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  align-items: center;
+  background: #fbfbfb;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(18, 18, 18, 0.03);
+}
+
+/* Campos del formulario */
+.ganado-form input,
+.ganado-form select,
+.ganado-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  background: #fff;
+}
+
+/* Hover y foco */
+.ganado-form input:focus,
+.ganado-form select:focus,
+.ganado-form textarea:focus {
+  border-color: #b88a57;
+  box-shadow: 0 0 0 3px rgba(184, 138, 87, 0.08);
+}
+
+/* Botón del formulario ocupa toda la fila */
+.ganado-form button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 10px 18px;
+  background: linear-gradient(180deg,#6b4b2f,#4b3523);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
+}
+
+/* Hover botón */
+.ganado-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(75, 53, 35, 0.12);
+}
+
+/* Tabla */
+.ganado-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* Cabecera */
+.ganado-table thead th {
+  text-align: left;
+  padding: 12px 14px;
+  background: #f7f5f3;
+  font-size: 13px;
+  color: #4a4a4a;
+  border-bottom: 1px solid #eee;
+}
+
+/* Filas y celdas */
+.ganado-table tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Última fila sin border */
+.ganado-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Acción: botones dentro de la tabla */
+.ganado-table button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Edit button */
+.ganado-table button:nth-of-type(1) {
+  background: #b88a57;
+  color: #fff;
+}
+
+/* Small utility for spacing */
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+/* Empty state */
+.ganado-empty {
+  padding: 28px;
+  text-align: center;
+  color: #777;
+  border: 1px dashed #eee;
+  border-radius: 8px;
+}
+
+/* Responsive: adaptar grid y tabla */
+@media (max-width: 980px) {
+  .ganado-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .ganado {
+    padding: 16px;
+  }
+
+  .ganado-form {
+    grid-template-columns: 1fr;
+  }
+
+  .ganado-form button {
+    width: 100%;
+  }
+
+  .ganado-table thead {
+    display: none; /* ocultar cabecera en móvil para tabla vertical */
+  }
+
+  .ganado-table,
+  .ganado-table tbody,
+  .ganado-table tr,
+  .ganado-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .ganado-table tr {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    padding: 12px;
+  }
+
+  .ganado-table td {
+    padding: 6px 0;
+    border: none;
+    font-size: 14px;
+  }
+
+  .ganado-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .ganado-table button {
+    width: 100%;
+  }
+}
