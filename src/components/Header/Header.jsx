@@ -1,5 +1,5 @@
 import "./Header.css";
-import logoGanaderia from "../../assets/icons/nebulaIcon2.png";
+import nebulaIcon2 from "../../assets/icons/nebulaicon2.svg";
 import { PerfilCard } from "../PerfilCard";
 
 const Header = ({ isOpen }) => {
@@ -7,7 +7,7 @@ const Header = ({ isOpen }) => {
     <>
       <header className="header" style={{ display: isOpen ? "flex" : "none" }}>
         <figure>
-          <img src={logoGanaderia} alt="" />
+          <img src={nebulaIcon2} alt="" />
         </figure>
         <PerfilCard />
       </header>
